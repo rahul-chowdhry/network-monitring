@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #e8eef7;
+  background: #07101d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(36, 99, 235, 0.12), transparent 30%),
+    #07101d;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  min-height: 82px;
+  padding: 18px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(7, 16, 29, 0.92);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
+
+.topbar p {
+  margin: 5px 0 0;
+  color: #8190a5;
+  font-size: 13px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #a9b7ca;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+.dashboard {
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 34px 0 60px;
+}
+
+.welcome-card {
+  min-height: 210px;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 31, 52, 0.96),
+    rgba(10, 21, 37, 0.96)
+  );
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #5ea8ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.welcome-card h2,
+.devices-section h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: #8797ac;
+  line-height: 1.7;
+}
+
+.network-icon {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  border: 1px solid rgba(94, 168, 255, 0.25);
+  color: #5ea8ff;
+  font-size: 54px;
+  background: rgba(94, 168, 255, 0.06);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.stat-card {
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 16px;
+  background: rgba(12, 25, 43, 0.8);
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #718198;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.stat-card strong {
+  font-size: 32px;
+  font-weight: 650;
+}
+
+.devices-section {
+  margin-top: 18px;
+  padding: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 20px;
+  background: rgba(10, 21, 37, 0.82);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.scan-button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: #2563eb;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.scan-button:hover {
+  background: #3473ee;
+}
+
+.empty-state {
+  margin-top: 24px;
+  padding: 55px 25px;
+  text-align: center;
+  border: 1px dashed rgba(148, 163, 184, 0.16);
+  border-radius: 16px;
+}
+
+.empty-icon {
+  font-size: 42px;
+  color: #5ea8ff;
+}
+
+.empty-state h3 {
+  margin: 12px 0 8px;
+  font-size: 18px;
+}
+
+.empty-state p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #718198;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-card {
+    align-items: flex-start;
+  }
+
+  .network-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+
+  .dashboard {
+    width: min(100% - 28px, 1400px);
+    padding-top: 20px;
+  }
+
+  .welcome-card {
+    padding: 24px;
+  }
+
+  .welcome-card h2,
+  .devices-section h2 {
+    font-size: 23px;
+  }
+
+  .network-icon {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .devices-section {
+    padding: 20px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
