@@ -1,0 +1,10 @@
+fastapi==0.141.1
+uvicorn==0.52.3
+SQLAlchemy==2.0.53
+pydantic==2.13.5
+PyMySQL==1.1.2
+python-dotenv==1.1.1
+psutil==7.0.0
+scapy==2.7.0
+python-multipart==0.0.20
+pydantic-settings==2.12.0
